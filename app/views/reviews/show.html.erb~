@@ -21,7 +21,12 @@
       <% @review.rating.times do %>
         &#9733
       <% end %>
-
+<p>
+  <b> Location: </b>
+  <b> Google Maps: </br><br/>
+    <%= google_map(@location.address) %>
+</p>
+    
 
 <%= link_to 'Edit', edit_review_path(@review) %> |
 <%= link_to 'Back', reviews_path %>

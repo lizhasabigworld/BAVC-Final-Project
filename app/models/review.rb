@@ -8,4 +8,6 @@ delegate :name, :to => :location, :allow_nil => true, :prefix => true
 
 
 accepts_nested_attributes_for :location
+
+
 end

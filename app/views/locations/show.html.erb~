@@ -6,7 +6,7 @@
 <p>
   <b>Address:</b>
   <%=h @location.address %>
-  <%= google_map(@location.address) %>
+  <%= google_maps(@location.address) %>
 </p>
 
 

@@ -6,4 +6,8 @@ belongs_to :location
 
 delegate :name, :to => :location, :allow_nil => true, :prefix => true 
 
+
+accepts_nested_attributes_for :location
+
+f.fields_for_new_location.rb
 end

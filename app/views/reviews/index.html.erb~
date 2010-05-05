@@ -14,8 +14,11 @@
    
   <div id="review-location" >
       <strong> Location: </strong>
-        <%= link_to review.location_name, review.location %>
+        <%= link_to review.location_name, review.location unless review.location.nil? %>
    </div>
+  <p>
+    <%= f.fields_for_new_location%>
+  </p>
 
     <ul>
     <li><%= link_to 'Show', review %></li>
