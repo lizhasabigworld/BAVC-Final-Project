@@ -1,0 +1,31 @@
+
+<hr/>
+<%= link_to 'Oh, shucks. New review!', new_review_path %>
+
+<% @reviews.each do |review| %>
+<hr>
+    <h3><%=h review.title %></h3>
+    <p><%=h review.body %><p>
+    <p><%=h review.rating %></p>
+      <% review.rating.times do %>
+        &#9733
+      <% end %>
+    <p><%=h review.author %></p>
+   
+  <div id="review-location" >
+      <strong> Location: </strong>
+        <%= link_to @review.location_name, @review.location unless @review.location.nil? %>
+   </div>
+
+  <div id=
+
+    <ul>
+    <li><%= link_to 'Show', review %></li>
+    <li><%= link_to 'Edit', edit_review_path(review) %></li>
+    <li><%= link_to 'Trash it', review, :confirm => 'Delete for sure?', :method => :delete %></li>
+    </ul>  
+<hr>
+<% end %>
+
+      
+      
